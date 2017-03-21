@@ -5,7 +5,8 @@ public class Client {
     private int serviceTime;                        // время, необходимое на обслуживание
     private OperationWithMoney operationWithMoney;  // тип оперции с деньгами
 
-    public Client(int amountOfMoney, int serviceTime, OperationWithMoney operationWithMoney) {
+
+    Client(int amountOfMoney, int serviceTime, OperationWithMoney operationWithMoney) {
         this.amountOfMoney = amountOfMoney;
         this.serviceTime = serviceTime;
         this.operationWithMoney = operationWithMoney;
@@ -33,5 +34,14 @@ public class Client {
 
     public void setOperationWithMoney(OperationWithMoney operationWithMoney) {
         this.operationWithMoney = operationWithMoney;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "amountOfMoney = " + amountOfMoney +
+                ", serviceTime = " + serviceTime +
+                ", operationWithMoney = " + operationWithMoney +
+                '}';
     }
 }

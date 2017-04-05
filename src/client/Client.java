@@ -1,6 +1,8 @@
 package client;
 
 public class Client {
+    private static int generalId = 0;
+    private int id;
     private int amountOfMoney;                      // сумма денег, который оперирует клиент
     private int serviceTime;                        // время, необходимое на обслуживание
     private OperationWithMoney operationWithMoney;  // тип оперции с деньгами
@@ -10,6 +12,7 @@ public class Client {
         this.amountOfMoney = amountOfMoney;
         this.serviceTime = serviceTime;
         this.operationWithMoney = operationWithMoney;
+        this.id = generalId++;
     }
 
     public int getAmountOfMoney() {
@@ -39,7 +42,8 @@ public class Client {
     @Override
     public String toString() {
         return "Client{" +
-                "amountOfMoney = " + amountOfMoney +
+                "id = " + id +
+                ", amountOfMoney = " + amountOfMoney +
                 ", serviceTime = " + serviceTime +
                 ", operationWithMoney = " + operationWithMoney +
                 '}';
